@@ -34,6 +34,9 @@ class Dessert
         self.ingredients.map do |ingredient|
             ingredient.calorie_count
         end.sum
+    end
 
+    def calories
+      calorie_count
     end
 end

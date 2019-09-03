@@ -31,4 +31,12 @@ class Bakery
         # end
     end
 
+    def shopping_list
+      ingredients.map {|ingredient| ingredient.name}
+    end
+
+    def average_calories
+      d = desserts
+      d.reduce(0) {|memo, dessert| memo += dessert.calories}/d.length
+    end
 end
